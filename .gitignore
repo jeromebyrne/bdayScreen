@@ -10,6 +10,15 @@
 /[Bb]uilds/
 /[Ll]ogs/
 /[Uu]ser[Ss]ettings/
+# Unity project is nested in /bdayScreen
+/bdayScreen/[Ll]ibrary/
+/bdayScreen/[Tt]emp/
+/bdayScreen/[Oo]bj/
+/bdayScreen/[Bb]uild/
+/bdayScreen/[Bb]uilds/
+/bdayScreen/[Ll]ogs/
+/bdayScreen/[Uu]ser[Ss]ettings/
+/bdayScreen/Packages/PackageCache/
 *.log
 
 # By default unity supports Blender asset imports, *.blend1 blender files do not need to be commited to version control.
