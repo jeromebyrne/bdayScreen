@@ -12,8 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c15caa9eadd345a084fbe8a0488bc4ca, type: 3}
   m_Name: GameTuning
   m_EditorClassIdentifier: 
-  runnerSpeed: 2
+  runnerSpeed: 4
   runnerMinX: -10
-  runnerMaxX: 999999
+  runnerMaxX: 7000
   cameraOffset: {x: 0, y: 3, z: -10}
   cameraSmoothTime: 0

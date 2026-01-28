@@ -7,6 +7,7 @@ public class ParallaxTiler : MonoBehaviour
     public bool useSpriteWidth = true;
     public bool alternateFlipX = false;
     public Camera targetCamera;
+    [Min(0f)] public float repositionBuffer = 0.5f;
 
     private static bool isCreatingClone;
     private bool isClone;
@@ -45,7 +46,7 @@ public class ParallaxTiler : MonoBehaviour
         if (targetCamera == null) return;
 
         float camHalfWidth = GetCameraHalfWidth();
-        float leftBound = targetCamera.transform.position.x - camHalfWidth - tileWidth;
+        float leftBound = targetCamera.transform.position.x - camHalfWidth - tileWidth - repositionBuffer;
 
         Transform leftmost = tiles[0];
         Transform rightmost = tiles[0];
@@ -55,12 +56,22 @@ public class ParallaxTiler : MonoBehaviour
             if (tiles[i].position.x > rightmost.position.x) rightmost = tiles[i];
         }
 
-        if (leftmost.position.x + (tileWidth * 0.5f) < leftBound)
+        // Catch up even if the camera moves fast and multiple tiles need cycling.
+        int safety = tiles.Count + 2;
+        while (leftmost.position.x + (tileWidth * 0.5f) < leftBound && safety-- > 0)
         {
             float newX = rightmost.position.x + tileWidth + spacing;
             var pos = leftmost.position;
             pos.x = newX;
             leftmost.position = pos;
+
+            rightmost = leftmost;
+            leftmost = tiles[0];
+            for (int i = 1; i < tiles.Count; i++)
+            {
+                if (tiles[i].position.x < leftmost.position.x) leftmost = tiles[i];
+                if (tiles[i].position.x > rightmost.position.x) rightmost = tiles[i];
+            }
         }
     }
 
@@ -71,7 +82,7 @@ public class ParallaxTiler : MonoBehaviour
 
         tileWidth = GetTileWidth();
 
-        for (int i = 1; i <= 2; i++)
+        for (int i = 1; i <= 6; i++)
         {
             isCreatingClone = true;
             var clone = Instantiate(gameObject, transform.parent);

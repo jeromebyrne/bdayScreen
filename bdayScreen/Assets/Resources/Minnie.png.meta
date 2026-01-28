@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 7b6a94c45f4e3442799a2e064d0c4005
+guid: e667e8048daae4e3ab77c71470364535
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 2824571072526516967
-    second: bg_far_0
+      213: 1353156227249224720
+    second: Minnie_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -46,7 +46,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -126,13 +126,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: bg_far_0
+      name: Minnie_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
-        width: 1536
-        height: 1024
+        x: 34
+        y: 20
+        width: 768
+        height: 1201
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -141,8 +141,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 7e289ccdc64e23720800000000000000
-      internalID: 2824571072526516967
+      spriteID: 01c3cca5b6067c210800000000000000
+      internalID: 1353156227249224720
       vertices: []
       indices: 
       edges: []
@@ -151,7 +151,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 5e97eb03825dee720800000000000000
+    spriteID: 
     internalID: 0
     vertices: []
     indices: 
@@ -161,7 +161,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      bg_far_0: 2824571072526516967
+      Minnie_0: 1353156227249224720
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
